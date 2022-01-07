@@ -16,6 +16,10 @@ step2:
 
 rasa run actions
 
+or 
+
+python -m rasa_sdk.endpoint --actions actions
+
 finally:
 
 then run url on postman
