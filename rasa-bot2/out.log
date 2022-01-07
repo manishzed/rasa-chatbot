@@ -1,0 +1,161 @@
+2022-01-07 12:57:27,412 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-01-07 12:57:27,412 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-01-07 12:57:27,412 [DEBUG]  Using the default number of Sanic workers (1).
+2022-01-07 12:57:27,428 [INFO ]  Enabling coroutine debugging. Loop id 1735033633352.
+2022-01-07 12:57:27,569 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmpbmce0225'.
+2022-01-07 12:57:29,100 [DEBUG]  Loading the model ...
+2022-01-07 12:57:29,765 [DEBUG]  Finished loading the model.
+2022-01-07 12:57:29,765 [DEBUG]  Building tensorflow prediction graph...
+2022-01-07 12:57:35,668 [DEBUG]  Finished building tensorflow prediction graph.
+2022-01-07 12:57:35,719 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-01-07 12:57:35,751 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-01-07 12:57:35,919 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmp8mv65fpl'.
+2022-01-07 12:57:35,934 [DEBUG]  Using yaml library: C:\Users\hp\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2022-01-07 12:57:40,994 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-01-07 12:57:40,994 [INFO ]  Rasa server is up and running.
+2022-01-07 13:11:43,924 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:11:51,698 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/parse'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/parse
+2022-01-07 13:11:58,305 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9664705395698547}' and entities '[]'
+2022-01-07 13:13:46,328 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:14:40,619 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook not found
+2022-01-07 13:18:18,671 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:21:36,628 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9664705395698547}' and entities '[]'
+2022-01-07 13:25:30,546 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-01-07 13:25:30,546 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-01-07 13:25:30,546 [DEBUG]  Using the default number of Sanic workers (1).
+2022-01-07 13:25:30,562 [INFO ]  Enabling coroutine debugging. Loop id 2384290570568.
+2022-01-07 13:25:30,671 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmptpii_j5u'.
+2022-01-07 13:25:32,203 [DEBUG]  Loading the model ...
+2022-01-07 13:25:32,874 [DEBUG]  Finished loading the model.
+2022-01-07 13:25:32,874 [DEBUG]  Building tensorflow prediction graph...
+2022-01-07 13:25:37,313 [DEBUG]  Finished building tensorflow prediction graph.
+2022-01-07 13:25:37,329 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-01-07 13:25:37,329 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-01-07 13:25:37,454 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmpg0ed3l__'.
+2022-01-07 13:25:37,469 [DEBUG]  Using yaml library: C:\Users\hp\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2022-01-07 13:25:39,516 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-01-07 13:25:39,516 [INFO ]  Rasa server is up and running.
+2022-01-07 13:25:48,208 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9664705395698547}' and entities '[]'
+2022-01-07 13:25:51,861 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:26:04,607 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:26:31,400 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:29:35,525 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:32:20,255 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
