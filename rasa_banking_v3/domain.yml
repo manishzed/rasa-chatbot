@@ -1,0 +1,109 @@
+intents:
+- greet
+- goodbye
+- affirm
+- thanks
+- deny
+- names
+- out_of_scope
+- accounts
+- ages
+- emails
+- contacts
+- pincodes
+- addresses
+- aadhars
+- credit_cards
+
+
+entities:
+- name
+- contact
+- email
+- age
+- pincode
+- address
+- aadhar
+
+
+
+slots:
+  name:
+    type: text
+  contact:
+    type: text
+  email:
+    type: text
+  age:
+    type: text
+  pincode:
+    type: text
+  address:
+    type: text
+  aadhar:
+    type: text
+
+actions:
+- utter_name
+- utter_thanks
+- utter_greet
+- utter_goodbye
+- utter_out_of_scope
+
+- utter_open_account
+- utter_ask_contact
+- utter_ask_email
+- utter_ask_age
+- utter_ask_pincode
+- utter_ask_address
+- utter_ask_aadhar
+- utter_submit
+- utter_open_credit_card
+- utter_credit_eligibility
+- utter_credit_delivered
+
+- action_rasa_db
+- utter_submit_rasa_db
+
+templates:
+  utter_name:
+  - text: "Hey there! Tell me your name."
+
+  utter_greet:
+  - text: "Nice to you meet you {name}. How can I help?"
+
+  utter_open_account:
+  - text: "please provide below details to open your bank account"
+  utter_ask_contact:
+  - text: "what is your phone?"
+  utter_ask_email:
+  - text: "please provide your email"
+  utter_ask_age:
+  - text: "what is your age?"
+  utter_ask_pincode:
+  - text: "please provide your pincode"
+  utter_ask_address:
+  - text: "please provide your address."
+  utter_ask_aadhar:
+  - text: "please provide your aadhar number as a proof."
+  utter_submit:
+  - text: "Thanks for providing details. We wil contact you soon via email, once your account is created."
+  utter_submit_rasa_db:
+  - text: "Would you like to save above data to database?."
+  utter_open_credit_card:
+  - text: "please provide below details to open your credit card"
+  utter_credit_eligibility:
+  - text: "please wait fetching your credit score....success, your credit card will be delivered in your registred address in 3 working days. Thanks"
+  utter_credit_delivered:
+  - text: "success. your credit card will be delivered in your registred address in 3 working days. Thanks"
+  
+  utter_goodbye:
+  - text: "Have a nice day {name}!"
+  utter_thanks:
+  - text: "My pleasure."
+
+  utter_out_of_scope:
+    - text: "Sorry, I can’t deal with that request."
+    - text: "I'm sorry, I can't handle that request."
+    - text: "I can't help you with that, I'm sorry."
+    - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request."  

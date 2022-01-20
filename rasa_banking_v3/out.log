@@ -1,0 +1,1119 @@
+2022-01-07 12:57:27,412 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-01-07 12:57:27,412 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-01-07 12:57:27,412 [DEBUG]  Using the default number of Sanic workers (1).
+2022-01-07 12:57:27,428 [INFO ]  Enabling coroutine debugging. Loop id 1735033633352.
+2022-01-07 12:57:27,569 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmpbmce0225'.
+2022-01-07 12:57:29,100 [DEBUG]  Loading the model ...
+2022-01-07 12:57:29,765 [DEBUG]  Finished loading the model.
+2022-01-07 12:57:29,765 [DEBUG]  Building tensorflow prediction graph...
+2022-01-07 12:57:35,668 [DEBUG]  Finished building tensorflow prediction graph.
+2022-01-07 12:57:35,719 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-01-07 12:57:35,751 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-01-07 12:57:35,919 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmp8mv65fpl'.
+2022-01-07 12:57:35,934 [DEBUG]  Using yaml library: C:\Users\hp\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2022-01-07 12:57:40,994 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-01-07 12:57:40,994 [INFO ]  Rasa server is up and running.
+2022-01-07 13:11:43,924 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:11:51,698 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/parse'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/parse
+2022-01-07 13:11:58,305 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9664705395698547}' and entities '[]'
+2022-01-07 13:13:46,328 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:14:40,619 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook not found
+2022-01-07 13:18:18,671 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:21:36,628 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9664705395698547}' and entities '[]'
+2022-01-07 13:25:30,546 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-01-07 13:25:30,546 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-01-07 13:25:30,546 [DEBUG]  Using the default number of Sanic workers (1).
+2022-01-07 13:25:30,562 [INFO ]  Enabling coroutine debugging. Loop id 2384290570568.
+2022-01-07 13:25:30,671 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmptpii_j5u'.
+2022-01-07 13:25:32,203 [DEBUG]  Loading the model ...
+2022-01-07 13:25:32,874 [DEBUG]  Finished loading the model.
+2022-01-07 13:25:32,874 [DEBUG]  Building tensorflow prediction graph...
+2022-01-07 13:25:37,313 [DEBUG]  Finished building tensorflow prediction graph.
+2022-01-07 13:25:37,329 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-01-07 13:25:37,329 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-01-07 13:25:37,454 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmpg0ed3l__'.
+2022-01-07 13:25:37,469 [DEBUG]  Using yaml library: C:\Users\hp\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2022-01-07 13:25:39,516 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-01-07 13:25:39,516 [INFO ]  Rasa server is up and running.
+2022-01-07 13:25:48,208 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9664705395698547}' and entities '[]'
+2022-01-07 13:25:51,861 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:26:04,607 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:26:31,400 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:29:35,525 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 13:32:20,255 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook/'
+Traceback (most recent call last):
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\hp\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhooks/rest/webhook/ not found
+2022-01-07 20:25:20,747 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-01-07 20:25:20,747 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-01-07 20:25:20,747 [DEBUG]  Using the default number of Sanic workers (1).
+2022-01-07 20:25:20,762 [INFO ]  Enabling coroutine debugging. Loop id 2499625120776.
+2022-01-07 20:25:20,825 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmpx8kkzux2'.
+2022-01-07 20:25:29,735 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en_core_web_md'.
+2022-01-07 20:25:29,860 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-01-07 20:25:29,860 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-01-07 20:25:29,906 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmpt0tv684z'.
+2022-01-07 20:25:29,922 [DEBUG]  Using yaml library: C:\Users\hp\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2022-01-07 20:25:32,524 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-01-07 20:25:32,524 [INFO ]  Rasa server is up and running.
+2022-01-07 20:26:32,639 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-07 20:28:50,226 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-07 20:28:50,228 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-07 20:28:50,230 [DEBUG]  Creating a new tracker for id 'default'.
+2022-01-07 20:28:50,233 [DEBUG]  Starting a new session for conversation ID 'default'.
+2022-01-07 20:28:50,235 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.core.events.SessionStarted object at 0x000002459FFF2688>, <rasa.core.events.ActionExecuted object at 0x000002459FFF2648>]'.
+2022-01-07 20:28:50,237 [DEBUG]  Current slot values: 
+	model: None
+	name: None
+	product: None
+2022-01-07 20:28:50,279 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.8737095630224054}' and entities '[]'
+2022-01-07 20:28:50,283 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-01-07 20:28:50,286 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2022-01-07 20:28:50,288 [DEBUG]  There is a memorised next action 'utter_name'
+2022-01-07 20:28:51,761 [DEBUG]  There is no active form
+2022-01-07 20:28:51,765 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:28:51,767 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-07 20:28:51,769 [DEBUG]  Predicted next action 'utter_name' with confidence 1.00.
+2022-01-07 20:28:51,771 [DEBUG]  Action 'utter_name' ended with events '[BotUttered('Hey there! Tell me your name.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567531.7713954)]'.
+2022-01-07 20:28:51,775 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}]
+2022-01-07 20:28:51,777 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-07 20:28:51,821 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2022-01-07 20:28:51,823 [DEBUG]  There is no active form
+2022-01-07 20:28:51,825 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:28:51,827 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-07 20:28:51,830 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-07 20:28:51,833 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-07 20:28:51,837 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-07 20:28:51,851 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-07 20:28:51,853 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-07 20:28:51,855 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-07 20:28:51,858 [DEBUG]  Recreating tracker for id 'default'
+2022-01-07 20:28:51,873 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.8737095630224054}' and entities '[]'
+2022-01-07 20:28:51,876 [DEBUG]  Logged UserUtterance - tracker now has 8 events.
+2022-01-07 20:28:51,878 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2022-01-07 20:28:51,883 [DEBUG]  There is no memorised next action
+2022-01-07 20:28:51,929 [DEBUG]  There is no active form
+2022-01-07 20:28:51,932 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:28:51,934 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:28:51,936 [DEBUG]  Predicted next action 'utter_name' with confidence 0.99.
+2022-01-07 20:28:51,938 [DEBUG]  Action 'utter_name' ended with events '[BotUttered('Hey there! Tell me your name.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567531.9381795)]'.
+2022-01-07 20:28:51,940 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}]
+2022-01-07 20:28:51,942 [DEBUG]  There is no memorised next action
+2022-01-07 20:28:51,987 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2022-01-07 20:28:51,988 [DEBUG]  There is no active form
+2022-01-07 20:28:51,990 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:28:51,992 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:28:51,994 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-07 20:28:51,996 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-07 20:28:51,999 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-07 20:29:10,816 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-07 20:29:10,818 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-07 20:29:10,820 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-07 20:29:10,822 [DEBUG]  Recreating tracker for id 'default'
+2022-01-07 20:29:10,839 [DEBUG]  Received user message 'my name is manish' with intent '{'name': 'name', 'confidence': 0.4794576540982591}' and entities '[{'entity': 'name', 'start': 11, 'end': 17, 'confidence_entity': 0.49961382006202015, 'value': 'manish', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-07 20:29:10,844 [DEBUG]  Current slot values: 
+	model: None
+	name: manish
+	product: None
+2022-01-07 20:29:10,847 [DEBUG]  Logged UserUtterance - tracker now has 13 events.
+2022-01-07 20:29:10,849 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:10,852 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:10,893 [DEBUG]  There is no active form
+2022-01-07 20:29:10,895 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:10,897 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:10,899 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-01-07 20:29:10,902 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Nice to you meet you manish. How can I help?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567550.902356)]'.
+2022-01-07 20:29:10,904 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_utter_greet': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:10,907 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:10,949 [DEBUG]  There is no mapped action for the predicted intent, 'name'.
+2022-01-07 20:29:10,951 [DEBUG]  There is no active form
+2022-01-07 20:29:10,953 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:10,955 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:10,958 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-07 20:29:10,960 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-07 20:29:10,963 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-07 20:29:35,030 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-07 20:29:35,033 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-07 20:29:35,035 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-07 20:29:35,038 [DEBUG]  Recreating tracker for id 'default'
+2022-01-07 20:29:35,057 [DEBUG]  Received user message 'i want to buy a laptop' with intent '{'name': 'order_product', 'confidence': 0.5304134462036624}' and entities '[{'entity': 'product', 'start': 16, 'end': 22, 'confidence_entity': 0.9133170878026227, 'value': 'laptop', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-07 20:29:35,061 [DEBUG]  Current slot values: 
+	model: None
+	name: manish
+	product: laptop
+2022-01-07 20:29:35,063 [DEBUG]  Logged UserUtterance - tracker now has 18 events.
+2022-01-07 20:29:35,067 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_utter_greet': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:35,072 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:35,112 [DEBUG]  There is no active form
+2022-01-07 20:29:35,114 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:35,118 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:35,120 [DEBUG]  Predicted next action 'utter_ask_model_name' with confidence 1.00.
+2022-01-07 20:29:35,122 [DEBUG]  Action 'utter_ask_model_name' ended with events '[BotUttered('Which brand of laptop do you want to buy?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567575.1221225)]'.
+2022-01-07 20:29:35,125 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_utter_name': 1.0}, {'prev_action_listen': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_utter_greet': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_model_name': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:35,127 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:35,170 [DEBUG]  There is no mapped action for the predicted intent, 'order_product'.
+2022-01-07 20:29:35,172 [DEBUG]  There is no active form
+2022-01-07 20:29:35,174 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:35,176 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:35,178 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-07 20:29:35,179 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-07 20:29:35,183 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-07 20:29:49,900 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-07 20:29:49,902 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-07 20:29:49,903 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-07 20:29:49,905 [DEBUG]  Recreating tracker for id 'default'
+2022-01-07 20:29:49,923 [DEBUG]  Received user message 'i identify hp laptop' with intent '{'name': 'order_model', 'confidence': 0.5500423757665143}' and entities '[{'entity': 'model', 'start': 11, 'end': 13, 'confidence_entity': 0.7131421519270736, 'value': 'hp', 'extractor': 'CRFEntityExtractor'}, {'entity': 'product', 'start': 14, 'end': 20, 'confidence_entity': 0.9383714238253931, 'value': 'laptop', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-07 20:29:49,926 [DEBUG]  Current slot values: 
+	model: hp
+	name: manish
+	product: laptop
+2022-01-07 20:29:49,930 [DEBUG]  Logged UserUtterance - tracker now has 24 events.
+2022-01-07 20:29:49,933 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_utter_greet': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_model_name': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:49,935 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:49,983 [DEBUG]  There is no active form
+2022-01-07 20:29:49,984 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:49,986 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:49,988 [DEBUG]  Predicted next action 'action_order_product' with confidence 1.00.
+2022-01-07 20:29:49,997 [DEBUG]  Calling action endpoint to run action 'action_order_product'.
+2022-01-07 20:29:50,851 [DEBUG]  Action 'action_order_product' ended with events '[BotUttered('Your product is laptop, model is hp ', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567590.8510876)]'.
+2022-01-07 20:29:50,853 [DEBUG]  Current slot values: 
+	model: hp
+	name: manish
+	product: laptop
+2022-01-07 20:29:50,856 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'intent_name': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_model_name': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'prev_action_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:50,858 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:50,922 [DEBUG]  There is no mapped action for the predicted intent, 'order_model'.
+2022-01-07 20:29:50,924 [DEBUG]  There is no active form
+2022-01-07 20:29:50,925 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:50,928 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:50,931 [DEBUG]  Predicted next action 'utter_place_order' with confidence 1.00.
+2022-01-07 20:29:50,933 [DEBUG]  Action 'utter_place_order' ended with events '[BotUttered('Order was placed for hp laptop', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567590.933418)]'.
+2022-01-07 20:29:50,935 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_model_name': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'prev_action_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_place_order': 1.0, 'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:29:50,939 [DEBUG]  There is no memorised next action
+2022-01-07 20:29:50,983 [DEBUG]  There is no mapped action for the predicted intent, 'order_model'.
+2022-01-07 20:29:50,985 [DEBUG]  There is no active form
+2022-01-07 20:29:50,987 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:29:50,989 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:29:50,990 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-07 20:29:50,992 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-07 20:29:50,996 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-07 20:30:03,863 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-07 20:30:03,865 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-07 20:30:03,868 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-07 20:30:03,870 [DEBUG]  Recreating tracker for id 'default'
+2022-01-07 20:30:03,896 [DEBUG]  Received user message 'tell me a joke' with intent '{'name': 'joke', 'confidence': 0.47857709261083825}' and entities '[]'
+2022-01-07 20:30:03,898 [DEBUG]  Logged UserUtterance - tracker now has 30 events.
+2022-01-07 20:30:03,900 [DEBUG]  Current tracker state [{'prev_utter_ask_model_name': 1.0, 'intent_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'prev_action_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_place_order': 1.0, 'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_joke': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'slot_product_0': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:30:03,901 [DEBUG]  There is no memorised next action
+2022-01-07 20:30:03,943 [DEBUG]  There is no active form
+2022-01-07 20:30:03,944 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:30:03,946 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:30:03,948 [DEBUG]  Predicted next action 'action_joke' with confidence 0.55.
+2022-01-07 20:30:03,949 [DEBUG]  Calling action endpoint to run action 'action_joke'.
+2022-01-07 20:30:04,374 [DEBUG]  Action 'action_joke' ended with events '[BotUttered('Chuck Norris doesn't actually write books, the words assemble themselves out of fear.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1641567604.3736339)]'.
+2022-01-07 20:30:04,378 [DEBUG]  Current slot values: 
+	model: hp
+	name: manish
+	product: laptop
+2022-01-07 20:30:04,383 [DEBUG]  Current tracker state [{'intent_order_model': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'prev_action_order_product': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'prev_utter_place_order': 1.0, 'intent_order_model': 1.0, 'slot_model_0': 1.0, 'entity_model': 1.0, 'slot_product_0': 1.0, 'entity_product': 1.0, 'slot_name_0': 1.0}, {'intent_joke': 1.0, 'prev_action_listen': 1.0, 'slot_model_0': 1.0, 'slot_product_0': 1.0, 'slot_name_0': 1.0}, {'intent_joke': 1.0, 'slot_model_0': 1.0, 'prev_action_joke': 1.0, 'slot_product_0': 1.0, 'slot_name_0': 1.0}]
+2022-01-07 20:30:04,385 [DEBUG]  There is no memorised next action
+2022-01-07 20:30:04,452 [DEBUG]  There is no mapped action for the predicted intent, 'joke'.
+2022-01-07 20:30:04,454 [DEBUG]  There is no active form
+2022-01-07 20:30:04,457 [DEBUG]  NLU confidence threshold met, confidence of fallback action set to core threshold (0.3).
+2022-01-07 20:30:04,460 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-07 20:30:04,462 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-07 20:30:04,464 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-07 20:30:04,466 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:41:39,358 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-01-18 16:41:39,380 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-01-18 16:41:39,385 [DEBUG]  Using the default number of Sanic workers (1).
+2022-01-18 16:41:39,389 [INFO ]  Enabling coroutine debugging. Loop id 2081064375368.
+2022-01-18 16:41:39,594 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmp69mhd0z5'.
+2022-01-18 16:41:44,898 [DEBUG]  Loading the model ...
+2022-01-18 16:41:45,879 [DEBUG]  Finished loading the model.
+2022-01-18 16:41:45,885 [DEBUG]  Building tensorflow prediction graph...
+2022-01-18 16:41:52,118 [DEBUG]  Finished building tensorflow prediction graph.
+2022-01-18 16:41:52,147 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-01-18 16:41:52,149 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-01-18 16:41:52,344 [DEBUG]  Extracted model to 'C:\Users\hp\AppData\Local\Temp\tmptwckgxao'.
+2022-01-18 16:41:52,354 [DEBUG]  Using yaml library: C:\Users\hp\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2022-01-18 16:41:55,704 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-01-18 16:41:55,704 [INFO ]  Rasa server is up and running.
+2022-01-18 16:42:13,041 [DEBUG]  Issuing ticket for conversation 'jitesh97'.
+2022-01-18 16:42:13,044 [DEBUG]  Acquiring lock for conversation 'jitesh97'.
+2022-01-18 16:42:13,046 [DEBUG]  Acquired lock for conversation 'jitesh97'.
+2022-01-18 16:42:13,048 [DEBUG]  Creating a new tracker for id 'jitesh97'.
+2022-01-18 16:42:13,050 [DEBUG]  Starting a new session for conversation ID 'jitesh97'.
+2022-01-18 16:42:13,054 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.core.events.SessionStarted object at 0x000001E48E154EC8>, <rasa.core.events.ActionExecuted object at 0x000001E48E154F88>]'.
+2022-01-18 16:42:13,056 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: None
+	email: None
+	name: None
+	pincode: None
+2022-01-18 16:42:13,081 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.983616292476654}' and entities '[]'
+2022-01-18 16:42:13,084 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-01-18 16:42:13,086 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:42:13,088 [DEBUG]  There is a memorised next action 'utter_name'
+2022-01-18 16:42:14,574 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:42:14,575 [DEBUG]  Predicted next action 'utter_name' with confidence 1.00.
+2022-01-18 16:42:14,579 [DEBUG]  Action 'utter_name' ended with events '[BotUttered('Hey there! Tell me your name.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504334.579727)]'.
+2022-01-18 16:42:14,581 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:42:14,583 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:42:14,631 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2022-01-18 16:42:14,633 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:42:14,635 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:42:14,637 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:42:14,639 [DEBUG]  Deleted lock for conversation 'jitesh97'.
+2022-01-18 16:42:21,921 [DEBUG]  Issuing ticket for conversation 'jitesh97'.
+2022-01-18 16:42:21,923 [DEBUG]  Acquiring lock for conversation 'jitesh97'.
+2022-01-18 16:42:21,927 [DEBUG]  Acquired lock for conversation 'jitesh97'.
+2022-01-18 16:42:21,929 [DEBUG]  Recreating tracker for id 'jitesh97'
+2022-01-18 16:42:21,942 [DEBUG]  Received user message 'my nae is ish' with intent '{'name': 'names', 'confidence': 0.6692629456520081}' and entities '[{'entity': 'name', 'start': 10, 'end': 13, 'confidence_entity': 0.6868236841379936, 'value': 'ish', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:42:21,946 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: None
+	email: None
+	name: ish
+	pincode: None
+2022-01-18 16:42:21,948 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2022-01-18 16:42:21,951 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:42:21,956 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:22,022 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:22,025 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-01-18 16:42:22,029 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Nice to you meet you ish. How can I help?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504342.0284903)]'.
+2022-01-18 16:42:22,032 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:42:22,034 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:22,102 [DEBUG]  There is no mapped action for the predicted intent, 'names'.
+2022-01-18 16:42:22,105 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:22,107 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:42:22,110 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:42:22,113 [DEBUG]  Deleted lock for conversation 'jitesh97'.
+2022-01-18 16:42:36,820 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:42:36,823 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:42:36,826 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:42:36,828 [DEBUG]  Creating a new tracker for id 'default'.
+2022-01-18 16:42:36,830 [DEBUG]  Starting a new session for conversation ID 'default'.
+2022-01-18 16:42:36,832 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.core.events.SessionStarted object at 0x000001E48F401208>, <rasa.core.events.ActionExecuted object at 0x000001E48F401588>]'.
+2022-01-18 16:42:36,834 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: None
+	email: None
+	name: None
+	pincode: None
+2022-01-18 16:42:36,847 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.983616292476654}' and entities '[]'
+2022-01-18 16:42:36,851 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-01-18 16:42:36,852 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:42:36,858 [DEBUG]  There is a memorised next action 'utter_name'
+2022-01-18 16:42:36,925 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:42:36,928 [DEBUG]  Predicted next action 'utter_name' with confidence 1.00.
+2022-01-18 16:42:36,930 [DEBUG]  Action 'utter_name' ended with events '[BotUttered('Hey there! Tell me your name.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504356.9309916)]'.
+2022-01-18 16:42:36,933 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:42:36,935 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:42:36,996 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2022-01-18 16:42:36,998 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:42:37,000 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:42:37,001 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:42:37,004 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:42:45,518 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:42:45,521 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:42:45,524 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:42:45,527 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:42:45,540 [DEBUG]  Received user message 'ishmk' with intent '{'name': 'names', 'confidence': 0.9819770455360413}' and entities '[{'entity': 'name', 'start': 0, 'end': 5, 'confidence_entity': 0.7496575194805889, 'value': 'ishmk', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:42:45,544 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: None
+	email: None
+	name: ishmk
+	pincode: None
+2022-01-18 16:42:45,546 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2022-01-18 16:42:45,549 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:42:45,551 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:45,631 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:45,634 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-01-18 16:42:45,638 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Nice to you meet you ishmk. How can I help?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504365.6387472)]'.
+2022-01-18 16:42:45,641 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:42:45,644 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:45,705 [DEBUG]  There is no mapped action for the predicted intent, 'names'.
+2022-01-18 16:42:45,708 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:45,710 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:42:45,712 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:42:45,714 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:42:53,772 [DEBUG]  Issuing ticket for conversation 'jitesh97'.
+2022-01-18 16:42:53,794 [DEBUG]  Acquiring lock for conversation 'jitesh97'.
+2022-01-18 16:42:53,795 [DEBUG]  Acquired lock for conversation 'jitesh97'.
+2022-01-18 16:42:53,797 [DEBUG]  Recreating tracker for id 'jitesh97'
+2022-01-18 16:42:53,812 [DEBUG]  Received user message 'thanks' with intent '{'name': 'thanks', 'confidence': 0.9782301187515259}' and entities '[]'
+2022-01-18 16:42:53,815 [DEBUG]  Logged UserUtterance - tracker now has 13 events.
+2022-01-18 16:42:53,821 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_thanks': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}]
+2022-01-18 16:42:53,824 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:53,877 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:53,878 [DEBUG]  Predicted next action 'utter_thanks' with confidence 0.99.
+2022-01-18 16:42:53,880 [DEBUG]  Action 'utter_thanks' ended with events '[BotUttered('My pleasure.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504373.8803132)]'.
+2022-01-18 16:42:53,882 [DEBUG]  Current tracker state [{'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_thanks': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0}]
+2022-01-18 16:42:53,885 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:53,924 [DEBUG]  There is no mapped action for the predicted intent, 'thanks'.
+2022-01-18 16:42:53,926 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:53,928 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:42:53,929 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:42:53,932 [DEBUG]  Deleted lock for conversation 'jitesh97'.
+2022-01-18 16:42:57,468 [DEBUG]  Issuing ticket for conversation 'jitesh97'.
+2022-01-18 16:42:57,471 [DEBUG]  Acquiring lock for conversation 'jitesh97'.
+2022-01-18 16:42:57,473 [DEBUG]  Acquired lock for conversation 'jitesh97'.
+2022-01-18 16:42:57,476 [DEBUG]  Recreating tracker for id 'jitesh97'
+2022-01-18 16:42:57,485 [DEBUG]  Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.9808041453361511}' and entities '[]'
+2022-01-18 16:42:57,489 [DEBUG]  Logged UserUtterance - tracker now has 17 events.
+2022-01-18 16:42:57,492 [DEBUG]  Current tracker state [{'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_thanks': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0}, {'slot_name_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0}]
+2022-01-18 16:42:57,494 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:57,537 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:57,539 [DEBUG]  Predicted next action 'utter_goodbye' with confidence 1.00.
+2022-01-18 16:42:57,541 [DEBUG]  Action 'utter_goodbye' ended with events '[BotUttered('Have a nice day ish!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504377.5415983)]'.
+2022-01-18 16:42:57,544 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_thanks': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0}, {'slot_name_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0}, {'slot_name_0': 1.0, 'prev_utter_goodbye': 1.0, 'intent_goodbye': 1.0}]
+2022-01-18 16:42:57,545 [DEBUG]  There is no memorised next action
+2022-01-18 16:42:57,584 [DEBUG]  There is no mapped action for the predicted intent, 'goodbye'.
+2022-01-18 16:42:57,586 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:42:57,589 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:42:57,591 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:42:57,593 [DEBUG]  Deleted lock for conversation 'jitesh97'.
+2022-01-18 16:43:07,663 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.983616292476654}' and entities '[]'
+2022-01-18 16:43:54,015 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2022-01-18 16:52:45,801 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:52:45,803 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:52:45,805 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:52:45,807 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:52:45,819 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.983616292476654}' and entities '[]'
+2022-01-18 16:52:45,821 [DEBUG]  Logged UserUtterance - tracker now has 13 events.
+2022-01-18 16:52:45,825 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'slot_name_0': 1.0, 'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:52:45,826 [DEBUG]  There is no memorised next action
+2022-01-18 16:52:45,877 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:52:45,880 [DEBUG]  Predicted next action 'utter_name' with confidence 0.99.
+2022-01-18 16:52:45,882 [DEBUG]  Action 'utter_name' ended with events '[BotUttered('Hey there! Tell me your name.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504965.8823597)]'.
+2022-01-18 16:52:45,885 [DEBUG]  Current tracker state [{'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'slot_name_0': 1.0, 'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'prev_utter_name': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:52:45,887 [DEBUG]  There is no memorised next action
+2022-01-18 16:52:45,932 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2022-01-18 16:52:45,934 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:52:45,935 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:52:45,937 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:52:45,940 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:52:56,510 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:52:56,518 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:52:56,518 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:52:56,518 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:52:56,590 [DEBUG]  Received user message 'my name is manish kumar' with intent '{'name': 'names', 'confidence': 0.9920355081558228}' and entities '[{'entity': 'name', 'start': 11, 'end': 23, 'confidence_entity': 0.5597329863853904, 'value': 'manish kumar', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:52:56,590 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: None
+	email: None
+	name: manish kumar
+	pincode: None
+2022-01-18 16:52:56,590 [DEBUG]  Logged UserUtterance - tracker now has 18 events.
+2022-01-18 16:52:56,598 [DEBUG]  Current tracker state [{'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'slot_name_0': 1.0, 'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:52:56,598 [DEBUG]  There is no memorised next action
+2022-01-18 16:52:56,638 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:52:56,638 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-01-18 16:52:56,638 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Nice to you meet you manish kumar. How can I help?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504976.6386647)]'.
+2022-01-18 16:52:56,646 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'slot_name_0': 1.0, 'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:52:56,646 [DEBUG]  There is no memorised next action
+2022-01-18 16:52:56,686 [DEBUG]  There is no mapped action for the predicted intent, 'names'.
+2022-01-18 16:52:56,686 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:52:56,686 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:52:56,694 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:52:56,694 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:05,192 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:05,193 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:05,193 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:05,193 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:05,193 [DEBUG]  Received user message 'open deposit account' with intent '{'name': 'accounts', 'confidence': 0.998558759689331}' and entities '[]'
+2022-01-18 16:53:05,209 [DEBUG]  Logged UserUtterance - tracker now has 22 events.
+2022-01-18 16:53:05,209 [DEBUG]  Current tracker state [{'slot_name_0': 1.0, 'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}]
+2022-01-18 16:53:05,209 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:05,256 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:05,256 [DEBUG]  Predicted next action 'utter_open_account' with confidence 0.99.
+2022-01-18 16:53:05,256 [DEBUG]  Action 'utter_open_account' ended with events '[BotUttered('please provide below details to open your bank account', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504985.2567918)]'.
+2022-01-18 16:53:05,256 [DEBUG]  Current tracker state [{'slot_name_0': 1.0, 'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_open_account': 1.0}]
+2022-01-18 16:53:05,256 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:05,303 [DEBUG]  There is no mapped action for the predicted intent, 'accounts'.
+2022-01-18 16:53:05,303 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:05,303 [DEBUG]  Predicted next action 'utter_ask_contact' with confidence 1.00.
+2022-01-18 16:53:05,303 [DEBUG]  Action 'utter_ask_contact' ended with events '[BotUttered('what is your phone?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504985.3036897)]'.
+2022-01-18 16:53:05,303 [DEBUG]  Current tracker state [{'slot_name_0': 1.0, 'entity_name': 1.0, 'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_ask_contact': 1.0}]
+2022-01-18 16:53:05,303 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:05,350 [DEBUG]  There is no mapped action for the predicted intent, 'accounts'.
+2022-01-18 16:53:05,350 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:05,350 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:05,350 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:05,350 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:12,574 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:12,574 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:12,574 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:12,574 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:12,589 [DEBUG]  Received user message '9887449779' with intent '{'name': 'contacts', 'confidence': 0.963934600353241}' and entities '[{'entity': 'contact', 'start': 0, 'end': 10, 'confidence_entity': 0.927254759522279, 'value': '9887449779', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:53:12,589 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: 9887449779
+	email: None
+	name: manish kumar
+	pincode: None
+2022-01-18 16:53:12,605 [DEBUG]  Logged UserUtterance - tracker now has 29 events.
+2022-01-18 16:53:12,605 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'slot_name_0': 1.0, 'entity_name': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:12,617 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:12,650 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:12,658 [DEBUG]  Predicted next action 'utter_ask_email' with confidence 1.00.
+2022-01-18 16:53:12,658 [DEBUG]  Action 'utter_ask_email' ended with events '[BotUttered('please provide your email', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504992.6581798)]'.
+2022-01-18 16:53:12,658 [DEBUG]  Current tracker state [{'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:12,666 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:12,701 [DEBUG]  There is no mapped action for the predicted intent, 'contacts'.
+2022-01-18 16:53:12,701 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:12,709 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:12,709 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:12,709 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:19,879 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:19,879 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:19,879 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:19,879 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:19,895 [DEBUG]  Received user message 'info@rasa.com' with intent '{'name': 'emails', 'confidence': 0.9989239573478699}' and entities '[{'entity': 'email', 'start': 0, 'end': 13, 'confidence_entity': 0.9649590441670962, 'value': 'info@rasa.com', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:53:19,903 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: 9887449779
+	email: info@rasa.com
+	name: manish kumar
+	pincode: None
+2022-01-18 16:53:19,907 [DEBUG]  Logged UserUtterance - tracker now has 34 events.
+2022-01-18 16:53:19,907 [DEBUG]  Current tracker state [{'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:19,907 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:19,954 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:19,954 [DEBUG]  Predicted next action 'utter_ask_age' with confidence 1.00.
+2022-01-18 16:53:19,954 [DEBUG]  Action 'utter_ask_age' ended with events '[BotUttered('what is your age?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642504999.9541001)]'.
+2022-01-18 16:53:19,969 [DEBUG]  Current tracker state [{'intent_accounts': 1.0, 'slot_name_0': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:19,969 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:20,016 [DEBUG]  There is no mapped action for the predicted intent, 'emails'.
+2022-01-18 16:53:20,016 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:20,016 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:20,016 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:20,016 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:23,215 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:23,215 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:23,215 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:23,223 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:23,231 [DEBUG]  Received user message '45' with intent '{'name': 'ages', 'confidence': 0.9872163534164429}' and entities '[{'entity': 'age', 'start': 0, 'end': 2, 'confidence_entity': 0.96179545985867, 'value': '45', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:53:23,231 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: 45
+	contact: 9887449779
+	email: info@rasa.com
+	name: manish kumar
+	pincode: None
+2022-01-18 16:53:23,239 [DEBUG]  Logged UserUtterance - tracker now has 39 events.
+2022-01-18 16:53:23,239 [DEBUG]  Current tracker state [{'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:23,247 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:23,287 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:23,295 [DEBUG]  Predicted next action 'utter_ask_pincode' with confidence 1.00.
+2022-01-18 16:53:23,295 [DEBUG]  Action 'utter_ask_pincode' ended with events '[BotUttered('please provide your pincode', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505003.2955697)]'.
+2022-01-18 16:53:23,295 [DEBUG]  Current tracker state [{'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'slot_name_0': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:23,303 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:23,351 [DEBUG]  There is no mapped action for the predicted intent, 'ages'.
+2022-01-18 16:53:23,351 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:23,351 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:23,359 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:23,359 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:29,903 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:29,903 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:29,903 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:29,919 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:29,929 [DEBUG]  Received user message '333000' with intent '{'name': 'pincodes', 'confidence': 0.9720132946968079}' and entities '[{'entity': 'pincode', 'start': 0, 'end': 6, 'confidence_entity': 0.8509827864546146, 'value': '333000', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:53:29,937 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: 45
+	contact: 9887449779
+	email: info@rasa.com
+	name: manish kumar
+	pincode: 333000
+2022-01-18 16:53:29,945 [DEBUG]  Logged UserUtterance - tracker now has 44 events.
+2022-01-18 16:53:29,945 [DEBUG]  Current tracker state [{'entity_email': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:29,953 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:29,995 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:29,995 [DEBUG]  Predicted next action 'utter_ask_address' with confidence 1.00.
+2022-01-18 16:53:29,995 [DEBUG]  Action 'utter_ask_address' ended with events '[BotUttered('please provide your address.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505009.995718)]'.
+2022-01-18 16:53:29,995 [DEBUG]  Current tracker state [{'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:30,003 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:30,045 [DEBUG]  There is no mapped action for the predicted intent, 'pincodes'.
+2022-01-18 16:53:30,054 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:30,054 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:30,054 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:30,062 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:44,266 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:44,267 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:44,267 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:44,267 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:44,267 [DEBUG]  Inconsistent BILOU tagging found, B- tag, L- tag pair encloses multiple entity classes.i.e. [B-a, I-b, L-a] instead of [B-a, I-a, L-a].
+Assuming B- class is correct.
+2022-01-18 16:53:44,267 [DEBUG]  Inconsistent BILOU tagging found, B- tag not closed by L- tag, i.e [B-a, I-a, O] instead of [B-a, L-a, O].
+Assuming last tag is L- instead of I-.
+2022-01-18 16:53:44,283 [DEBUG]  Received user message 'shankar vihar colony jaipur' with intent '{'name': 'addresses', 'confidence': 0.9989015460014343}' and entities '[{'entity': 'address', 'start': 0, 'end': 13, 'confidence_entity': 0.5894368220533338, 'value': 'shankar vihar', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:53:44,283 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: shankar vihar
+	age: 45
+	contact: 9887449779
+	email: info@rasa.com
+	name: manish kumar
+	pincode: 333000
+2022-01-18 16:53:44,283 [DEBUG]  Logged UserUtterance - tracker now has 49 events.
+2022-01-18 16:53:44,283 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:44,298 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:44,330 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:44,330 [DEBUG]  Predicted next action 'utter_ask_aadhar' with confidence 1.00.
+2022-01-18 16:53:44,330 [DEBUG]  Action 'utter_ask_aadhar' ended with events '[BotUttered('please provide your aadhar number as a proof.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505024.3302011)]'.
+2022-01-18 16:53:44,330 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'entity_age': 1.0, 'intent_ages': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:44,345 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:44,384 [DEBUG]  There is no mapped action for the predicted intent, 'addresses'.
+2022-01-18 16:53:44,385 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:44,385 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:44,385 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:44,385 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:53,163 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:53,171 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:53,171 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:53,171 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:53,187 [DEBUG]  Received user message '323100000000' with intent '{'name': 'aadhars', 'confidence': 0.9709222912788391}' and entities '[{'entity': 'aadhar', 'start': 0, 'end': 12, 'confidence_entity': 0.9618458139180733, 'value': '323100000000', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:53:53,187 [DEBUG]  Current slot values: 
+	aadhar: 323100000000
+	address: shankar vihar
+	age: 45
+	contact: 9887449779
+	email: info@rasa.com
+	name: manish kumar
+	pincode: 333000
+2022-01-18 16:53:53,195 [DEBUG]  Logged UserUtterance - tracker now has 54 events.
+2022-01-18 16:53:53,203 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}]
+2022-01-18 16:53:53,203 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:53,245 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:53,245 [DEBUG]  Predicted next action 'utter_submit' with confidence 1.00.
+2022-01-18 16:53:53,253 [DEBUG]  Action 'utter_submit' ended with events '[BotUttered('Thanks for providing details. We wil contact you soon via email, once your account is created.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505033.2530093)]'.
+2022-01-18 16:53:53,253 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}]
+2022-01-18 16:53:53,253 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:53,293 [DEBUG]  There is no mapped action for the predicted intent, 'aadhars'.
+2022-01-18 16:53:53,293 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:53,301 [DEBUG]  Predicted next action 'utter_submit_rasa_db' with confidence 1.00.
+2022-01-18 16:53:53,301 [DEBUG]  Action 'utter_submit_rasa_db' ended with events '[BotUttered('Would you like to save above data to database?.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505033.3010108)]'.
+2022-01-18 16:53:53,301 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}]
+2022-01-18 16:53:53,312 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:53,345 [DEBUG]  There is no mapped action for the predicted intent, 'aadhars'.
+2022-01-18 16:53:53,353 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:53,353 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:53:53,353 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:53:53,361 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:53:59,812 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:53:59,812 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:53:59,812 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:53:59,812 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:53:59,828 [DEBUG]  Received user message 'yes sure' with intent '{'name': 'affirm', 'confidence': 0.9974328279495239}' and entities '[]'
+2022-01-18 16:53:59,830 [DEBUG]  Logged UserUtterance - tracker now has 60 events.
+2022-01-18 16:53:59,830 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:53:59,830 [DEBUG]  There is no memorised next action
+2022-01-18 16:53:59,876 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:53:59,876 [DEBUG]  Predicted next action 'action_rasa_db' with confidence 1.00.
+2022-01-18 16:53:59,876 [DEBUG]  Calling action endpoint to run action 'action_rasa_db'.
+2022-01-18 16:54:00,351 [DEBUG]  Action 'action_rasa_db' ended with events '[BotUttered('Your name:manish kumar, contact:9887449779, email:info@rasa.com, age:45, pincode:333000, address:shankar vihar, aadhar:323100000000. what do you want else related to database?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505040.3510177)]'.
+2022-01-18 16:54:00,351 [DEBUG]  Current slot values: 
+	aadhar: 323100000000
+	address: shankar vihar
+	age: 45
+	contact: 9887449779
+	email: info@rasa.com
+	name: manish kumar
+	pincode: 333000
+2022-01-18 16:54:00,366 [DEBUG]  Current tracker state [{'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_action_rasa_db': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:00,366 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:00,397 [DEBUG]  There is no mapped action for the predicted intent, 'affirm'.
+2022-01-18 16:54:00,413 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:00,413 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:54:00,413 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:54:00,413 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:54:28,645 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:54:28,645 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:54:28,645 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:54:28,660 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:54:28,675 [DEBUG]  Received user message 'thanks' with intent '{'name': 'thanks', 'confidence': 0.9782301187515259}' and entities '[]'
+2022-01-18 16:54:28,675 [DEBUG]  Logged UserUtterance - tracker now has 64 events.
+2022-01-18 16:54:28,683 [DEBUG]  Current tracker state [{'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_action_rasa_db': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:28,683 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:28,723 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:28,723 [DEBUG]  Predicted next action 'utter_thanks' with confidence 1.00.
+2022-01-18 16:54:28,731 [DEBUG]  Action 'utter_thanks' ended with events '[BotUttered('My pleasure.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505068.7236207)]'.
+2022-01-18 16:54:28,731 [DEBUG]  Current tracker state [{'entity_aadhar': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_aadhar_0': 1.0, 'slot_contact_0': 1.0, 'slot_name_0': 1.0, 'intent_aadhars': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_action_rasa_db': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:28,731 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:28,773 [DEBUG]  There is no mapped action for the predicted intent, 'thanks'.
+2022-01-18 16:54:28,773 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:28,781 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:54:28,781 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:54:28,781 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:54:31,746 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:54:31,746 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:54:31,754 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:54:31,754 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:54:31,762 [DEBUG]  Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.9808041453361511}' and entities '[]'
+2022-01-18 16:54:31,770 [DEBUG]  Logged UserUtterance - tracker now has 68 events.
+2022-01-18 16:54:31,778 [DEBUG]  Current tracker state [{'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_action_rasa_db': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:31,778 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:31,834 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:31,842 [DEBUG]  Predicted next action 'utter_goodbye' with confidence 1.00.
+2022-01-18 16:54:31,842 [DEBUG]  Action 'utter_goodbye' ended with events '[BotUttered('Have a nice day manish kumar!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505071.8423119)]'.
+2022-01-18 16:54:31,842 [DEBUG]  Current tracker state [{'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_action_rasa_db': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_goodbye': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:31,850 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:31,898 [DEBUG]  There is no mapped action for the predicted intent, 'goodbye'.
+2022-01-18 16:54:31,898 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:31,898 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:54:31,906 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:54:31,906 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:54:35,871 [DEBUG]  Issuing ticket for conversation 'default'.
+2022-01-18 16:54:35,879 [DEBUG]  Acquiring lock for conversation 'default'.
+2022-01-18 16:54:35,879 [DEBUG]  Acquired lock for conversation 'default'.
+2022-01-18 16:54:35,879 [DEBUG]  Recreating tracker for id 'default'
+2022-01-18 16:54:35,895 [DEBUG]  Received user message 'bye' with intent '{'name': 'goodbye', 'confidence': 0.9808041453361511}' and entities '[]'
+2022-01-18 16:54:35,895 [DEBUG]  Logged UserUtterance - tracker now has 72 events.
+2022-01-18 16:54:35,903 [DEBUG]  Current tracker state [{'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_goodbye': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:35,903 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:35,943 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:35,943 [DEBUG]  Predicted next action 'utter_goodbye' with confidence 0.98.
+2022-01-18 16:54:35,951 [DEBUG]  Action 'utter_goodbye' ended with events '[BotUttered('Have a nice day manish kumar!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505075.9516835)]'.
+2022-01-18 16:54:35,951 [DEBUG]  Current tracker state [{'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_utter_thanks': 1.0, 'intent_thanks': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_goodbye': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_name_0': 1.0, 'slot_email_0': 1.0, 'prev_utter_goodbye': 1.0, 'slot_address_0': 1.0, 'intent_goodbye': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:54:35,959 [DEBUG]  There is no memorised next action
+2022-01-18 16:54:35,999 [DEBUG]  There is no mapped action for the predicted intent, 'goodbye'.
+2022-01-18 16:54:35,999 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:54:35,999 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:54:36,007 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:54:36,007 [DEBUG]  Deleted lock for conversation 'default'.
+2022-01-18 16:55:58,549 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:55:58,549 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:55:58,549 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:55:58,557 [DEBUG]  Creating a new tracker for id 'user'.
+2022-01-18 16:55:58,557 [DEBUG]  Starting a new session for conversation ID 'user'.
+2022-01-18 16:55:58,557 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.core.events.SessionStarted object at 0x000001E49043E708>, <rasa.core.events.ActionExecuted object at 0x000001E49043E9C8>]'.
+2022-01-18 16:55:58,557 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: None
+	email: None
+	name: None
+	pincode: None
+2022-01-18 16:55:58,573 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.983616292476654}' and entities '[]'
+2022-01-18 16:55:58,573 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-01-18 16:55:58,573 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:55:58,581 [DEBUG]  There is a memorised next action 'utter_name'
+2022-01-18 16:55:58,630 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:55:58,630 [DEBUG]  Predicted next action 'utter_name' with confidence 1.00.
+2022-01-18 16:55:58,630 [DEBUG]  Action 'utter_name' ended with events '[BotUttered('Hey there! Tell me your name.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505158.6308095)]'.
+2022-01-18 16:55:58,638 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}]
+2022-01-18 16:55:58,638 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:55:58,678 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2022-01-18 16:55:58,678 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:55:58,686 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:55:58,686 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:55:58,686 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:12,212 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:12,220 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:12,220 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:12,220 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:12,228 [DEBUG]  Received user message 'my name is bot' with intent '{'name': 'names', 'confidence': 0.6194081902503967}' and entities '[]'
+2022-01-18 16:56:12,236 [DEBUG]  Logged UserUtterance - tracker now has 8 events.
+2022-01-18 16:56:12,236 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:56:12,236 [DEBUG]  There is no memorised next action
+2022-01-18 16:56:12,284 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:56:12,284 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.99.
+2022-01-18 16:56:12,284 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Nice to you meet you None. How can I help?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505172.2844336)]'.
+2022-01-18 16:56:12,292 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'intent_names': 1.0}]
+2022-01-18 16:56:12,292 [DEBUG]  There is no memorised next action
+2022-01-18 16:56:12,332 [DEBUG]  There is no mapped action for the predicted intent, 'names'.
+2022-01-18 16:56:12,332 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:56:12,332 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:12,340 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:12,340 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:24,405 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:24,413 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:24,413 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:24,413 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:24,421 [DEBUG]  Received user message 'open deposit account' with intent '{'name': 'accounts', 'confidence': 0.998558759689331}' and entities '[]'
+2022-01-18 16:56:24,431 [DEBUG]  Logged UserUtterance - tracker now has 12 events.
+2022-01-18 16:56:24,431 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'prev_action_listen': 1.0}]
+2022-01-18 16:56:24,439 [DEBUG]  There is no memorised next action
+2022-01-18 16:56:24,489 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:56:24,489 [DEBUG]  Predicted next action 'utter_open_account' with confidence 0.99.
+2022-01-18 16:56:24,497 [DEBUG]  Action 'utter_open_account' ended with events '[BotUttered('please provide below details to open your bank account', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505184.4973536)]'.
+2022-01-18 16:56:24,497 [DEBUG]  Current tracker state [{'prev_utter_name': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'prev_utter_open_account': 1.0}]
+2022-01-18 16:56:24,497 [DEBUG]  There is no memorised next action
+2022-01-18 16:56:24,554 [DEBUG]  There is no mapped action for the predicted intent, 'accounts'.
+2022-01-18 16:56:24,562 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:56:24,562 [DEBUG]  Predicted next action 'utter_ask_contact' with confidence 1.00.
+2022-01-18 16:56:24,562 [DEBUG]  Action 'utter_ask_contact' ended with events '[BotUttered('what is your phone?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505184.5625608)]'.
+2022-01-18 16:56:24,570 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_names': 1.0}, {'prev_utter_greet': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'prev_utter_ask_contact': 1.0}]
+2022-01-18 16:56:24,570 [DEBUG]  There is no memorised next action
+2022-01-18 16:56:24,621 [DEBUG]  There is no mapped action for the predicted intent, 'accounts'.
+2022-01-18 16:56:24,621 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:56:24,621 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:24,621 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:24,629 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:29,671 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:29,678 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:29,678 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:29,678 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:29,678 [DEBUG]  Received user message '9887449779' with intent '{'name': 'contacts', 'confidence': 0.963934600353241}' and entities '[{'entity': 'contact', 'start': 0, 'end': 10, 'confidence_entity': 0.927254759522279, 'value': '9887449779', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:56:29,694 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: 9887449779
+	email: None
+	name: None
+	pincode: None
+2022-01-18 16:56:29,694 [DEBUG]  Logged UserUtterance - tracker now has 19 events.
+2022-01-18 16:56:29,694 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'intent_names': 1.0}, {'intent_accounts': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:29,694 [DEBUG]  There is no memorised next action
+2022-01-18 16:56:29,753 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2022-01-18 16:56:29,753 [DEBUG]  Predicted next action 'utter_ask_email' with confidence 1.00.
+2022-01-18 16:56:29,753 [DEBUG]  Action 'utter_ask_email' ended with events '[BotUttered('please provide your email', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505189.7537858)]'.
+2022-01-18 16:56:29,762 [DEBUG]  Current tracker state [{'intent_accounts': 1.0, 'prev_action_listen': 1.0}, {'intent_accounts': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:29,762 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:56:29,804 [DEBUG]  There is no mapped action for the predicted intent, 'contacts'.
+2022-01-18 16:56:29,804 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:29,804 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:29,812 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:29,812 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:40,308 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:40,308 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:40,316 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:40,316 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:40,324 [DEBUG]  Received user message 'info@info.com' with intent '{'name': 'emails', 'confidence': 0.9225309491157532}' and entities '[{'entity': 'email', 'start': 0, 'end': 13, 'confidence_entity': 0.9508702743526634, 'value': 'info@info.com', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:56:40,332 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: None
+	contact: 9887449779
+	email: info@info.com
+	name: None
+	pincode: None
+2022-01-18 16:56:40,332 [DEBUG]  Logged UserUtterance - tracker now has 24 events.
+2022-01-18 16:56:40,332 [DEBUG]  Current tracker state [{'intent_accounts': 1.0, 'prev_utter_open_account': 1.0}, {'intent_accounts': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:40,340 [DEBUG]  There is a memorised next action 'utter_ask_age'
+2022-01-18 16:56:40,380 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:40,380 [DEBUG]  Predicted next action 'utter_ask_age' with confidence 1.00.
+2022-01-18 16:56:40,380 [DEBUG]  Action 'utter_ask_age' ended with events '[BotUttered('what is your age?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505200.3808079)]'.
+2022-01-18 16:56:40,380 [DEBUG]  Current tracker state [{'intent_accounts': 1.0, 'prev_utter_ask_contact': 1.0}, {'intent_contacts': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:40,388 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:56:40,436 [DEBUG]  There is no mapped action for the predicted intent, 'emails'.
+2022-01-18 16:56:40,444 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:40,444 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:40,444 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:40,452 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:43,167 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:43,175 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:43,175 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:43,175 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:43,191 [DEBUG]  Received user message '43' with intent '{'name': 'ages', 'confidence': 0.9872163534164429}' and entities '[{'entity': 'age', 'start': 0, 'end': 2, 'confidence_entity': 0.9622326577028143, 'value': '43', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:56:43,191 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: 43
+	contact: 9887449779
+	email: info@info.com
+	name: None
+	pincode: None
+2022-01-18 16:56:43,191 [DEBUG]  Logged UserUtterance - tracker now has 29 events.
+2022-01-18 16:56:43,199 [DEBUG]  Current tracker state [{'intent_contacts': 1.0, 'entity_contact': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:43,199 [DEBUG]  There is a memorised next action 'utter_ask_pincode'
+2022-01-18 16:56:43,243 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:43,243 [DEBUG]  Predicted next action 'utter_ask_pincode' with confidence 1.00.
+2022-01-18 16:56:43,243 [DEBUG]  Action 'utter_ask_pincode' ended with events '[BotUttered('please provide your pincode', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505203.2431862)]'.
+2022-01-18 16:56:43,251 [DEBUG]  Current tracker state [{'prev_utter_ask_email': 1.0, 'intent_contacts': 1.0, 'entity_contact': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:43,251 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:56:43,291 [DEBUG]  There is no mapped action for the predicted intent, 'ages'.
+2022-01-18 16:56:43,291 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:43,291 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:43,299 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:43,303 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:48,364 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:48,364 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:48,364 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:48,364 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:48,380 [DEBUG]  Received user message '909090' with intent '{'name': 'pincodes', 'confidence': 0.9720132946968079}' and entities '[{'entity': 'pincode', 'start': 0, 'end': 6, 'confidence_entity': 0.85225092508715, 'value': '909090', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:56:48,380 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: None
+	age: 43
+	contact: 9887449779
+	email: info@info.com
+	name: None
+	pincode: 909090
+2022-01-18 16:56:48,380 [DEBUG]  Logged UserUtterance - tracker now has 34 events.
+2022-01-18 16:56:48,388 [DEBUG]  Current tracker state [{'entity_email': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:48,388 [DEBUG]  There is a memorised next action 'utter_ask_address'
+2022-01-18 16:56:48,436 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:48,436 [DEBUG]  Predicted next action 'utter_ask_address' with confidence 1.00.
+2022-01-18 16:56:48,436 [DEBUG]  Action 'utter_ask_address' ended with events '[BotUttered('please provide your address.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505208.436705)]'.
+2022-01-18 16:56:48,444 [DEBUG]  Current tracker state [{'entity_email': 1.0, 'prev_utter_ask_age': 1.0, 'slot_email_0': 1.0, 'intent_emails': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:48,444 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:56:48,484 [DEBUG]  There is no mapped action for the predicted intent, 'pincodes'.
+2022-01-18 16:56:48,484 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:48,484 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:48,493 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:48,493 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:56:58,449 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:56:58,449 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:56:58,449 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:56:58,457 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:56:58,465 [DEBUG]  Received user message 'bhav nagar' with intent '{'name': 'addresses', 'confidence': 0.9961837530136108}' and entities '[{'entity': 'address', 'start': 0, 'end': 10, 'confidence_entity': 0.9596160374339107, 'value': 'bhav nagar', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:56:58,473 [DEBUG]  Current slot values: 
+	aadhar: None
+	address: bhav nagar
+	age: 43
+	contact: 9887449779
+	email: info@info.com
+	name: None
+	pincode: 909090
+2022-01-18 16:56:58,473 [DEBUG]  Logged UserUtterance - tracker now has 39 events.
+2022-01-18 16:56:58,473 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:58,473 [DEBUG]  There is a memorised next action 'utter_ask_aadhar'
+2022-01-18 16:56:58,521 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:58,521 [DEBUG]  Predicted next action 'utter_ask_aadhar' with confidence 1.00.
+2022-01-18 16:56:58,521 [DEBUG]  Action 'utter_ask_aadhar' ended with events '[BotUttered('please provide your aadhar number as a proof.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505218.5217278)]'.
+2022-01-18 16:56:58,529 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'prev_utter_ask_pincode': 1.0, 'slot_email_0': 1.0, 'intent_ages': 1.0, 'entity_age': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:56:58,529 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:56:58,573 [DEBUG]  There is no mapped action for the predicted intent, 'addresses'.
+2022-01-18 16:56:58,573 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:56:58,573 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:56:58,573 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:56:58,581 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:57:07,399 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:57:07,399 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:57:07,399 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:57:07,407 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:57:07,415 [DEBUG]  Received user message '090909090909' with intent '{'name': 'aadhars', 'confidence': 0.9709222912788391}' and entities '[{'entity': 'aadhar', 'start': 0, 'end': 12, 'confidence_entity': 0.9152767295502814, 'value': '090909090909', 'extractor': 'CRFEntityExtractor'}]'
+2022-01-18 16:57:07,415 [DEBUG]  Current slot values: 
+	aadhar: 090909090909
+	address: bhav nagar
+	age: 43
+	contact: 9887449779
+	email: info@info.com
+	name: None
+	pincode: 909090
+2022-01-18 16:57:07,423 [DEBUG]  Logged UserUtterance - tracker now has 44 events.
+2022-01-18 16:57:07,423 [DEBUG]  Current tracker state [{'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_action_listen': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:57:07,423 [DEBUG]  There is a memorised next action 'utter_submit'
+2022-01-18 16:57:07,471 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:57:07,479 [DEBUG]  Predicted next action 'utter_submit' with confidence 1.00.
+2022-01-18 16:57:07,479 [DEBUG]  Action 'utter_submit' ended with events '[BotUttered('Thanks for providing details. We wil contact you soon via email, once your account is created.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505227.4797988)]'.
+2022-01-18 16:57:07,487 [DEBUG]  Current tracker state [{'slot_pincode_0': 1.0, 'slot_age_0': 1.0, 'entity_pincode': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_address': 1.0, 'intent_pincodes': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'prev_utter_submit': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:57:07,487 [DEBUG]  There is a memorised next action 'utter_submit_rasa_db'
+2022-01-18 16:57:07,524 [DEBUG]  There is no mapped action for the predicted intent, 'aadhars'.
+2022-01-18 16:57:07,524 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:57:07,532 [DEBUG]  Predicted next action 'utter_submit_rasa_db' with confidence 1.00.
+2022-01-18 16:57:07,532 [DEBUG]  Action 'utter_submit_rasa_db' ended with events '[BotUttered('Would you like to save above data to database?.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505227.5323386)]'.
+2022-01-18 16:57:07,532 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'prev_utter_submit': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:57:07,540 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:57:07,588 [DEBUG]  There is no mapped action for the predicted intent, 'aadhars'.
+2022-01-18 16:57:07,596 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:57:07,596 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:57:07,596 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:57:07,604 [DEBUG]  Deleted lock for conversation 'user'.
+2022-01-18 16:57:10,730 [DEBUG]  Issuing ticket for conversation 'user'.
+2022-01-18 16:57:10,738 [DEBUG]  Acquiring lock for conversation 'user'.
+2022-01-18 16:57:10,738 [DEBUG]  Acquired lock for conversation 'user'.
+2022-01-18 16:57:10,738 [DEBUG]  Recreating tracker for id 'user'
+2022-01-18 16:57:10,754 [DEBUG]  Received user message 'yes' with intent '{'name': 'affirm', 'confidence': 0.9071016311645508}' and entities '[]'
+2022-01-18 16:57:10,754 [DEBUG]  Logged UserUtterance - tracker now has 50 events.
+2022-01-18 16:57:10,762 [DEBUG]  Current tracker state [{'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'intent_addresses': 1.0, 'slot_email_0': 1.0, 'prev_utter_ask_aadhar': 1.0, 'slot_address_0': 1.0, 'entity_address': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'prev_utter_submit': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:57:10,762 [DEBUG]  There is a memorised next action 'action_rasa_db'
+2022-01-18 16:57:10,802 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:57:10,802 [DEBUG]  Predicted next action 'action_rasa_db' with confidence 1.00.
+2022-01-18 16:57:10,810 [DEBUG]  Calling action endpoint to run action 'action_rasa_db'.
+2022-01-18 16:57:11,039 [DEBUG]  Action 'action_rasa_db' ended with events '[BotUttered('Your name:None, contact:9887449779, email:info@info.com, age:43, pincode:909090, address:bhav nagar, aadhar:090909090909. what do you want else related to database?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1642505231.0394702)]'.
+2022-01-18 16:57:11,041 [DEBUG]  Current slot values: 
+	aadhar: 090909090909
+	address: bhav nagar
+	age: 43
+	contact: 9887449779
+	email: info@info.com
+	name: None
+	pincode: 909090
+2022-01-18 16:57:11,043 [DEBUG]  Current tracker state [{'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'prev_utter_submit': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'entity_aadhar': 1.0, 'intent_aadhars': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_utter_submit_rasa_db': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'prev_action_listen': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}, {'slot_aadhar_0': 1.0, 'slot_age_0': 1.0, 'slot_pincode_0': 1.0, 'prev_action_rasa_db': 1.0, 'slot_email_0': 1.0, 'slot_address_0': 1.0, 'intent_affirm': 1.0, 'slot_contact_0': 1.0}]
+2022-01-18 16:57:11,043 [DEBUG]  There is a memorised next action 'action_listen'
+2022-01-18 16:57:11,091 [DEBUG]  There is no mapped action for the predicted intent, 'affirm'.
+2022-01-18 16:57:11,091 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2022-01-18 16:57:11,091 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-01-18 16:57:11,091 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-01-18 16:57:11,099 [DEBUG]  Deleted lock for conversation 'user'.
