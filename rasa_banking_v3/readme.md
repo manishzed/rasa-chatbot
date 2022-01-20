@@ -22,7 +22,7 @@ step 2:> Now install RASA packages and its dependencies:
 
 #to run both rasa server i.e rasa nlu and rasa core
 
-# have created sqlite database to store some data like name, email, age, pincode...etc. buils class function on actions.py to store and shows data
+#have created sqlite database to store some data like name, email, age, pincode...etc. buils class function on actions.py to store and shows data
 
 #error free
 
