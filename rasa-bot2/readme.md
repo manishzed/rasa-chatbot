@@ -1,5 +1,26 @@
 #Rasa slot filling example either from entities and action slot. 
 
+#installation with setup dependecies:
+
+step 1> Build python Environment:
+
+a>	pip install virtualenv: to install virtualenv
+
+b>	virtualenv env_name: create vitual environment
+
+c>	env_name\Scripts\activate: to activate env
+
+
+step 2:>	Now install RASA packages and its dependencies:
+
+a>	pip install rasa==1.10.25
+
+b>	pip install tensorflow==2.1.4
+
+c>	pip install spacy==2.3.5
+
+
+
 #run flask api response on html
 
 #to run both rasa server i.e rasa nlu and rasa core
